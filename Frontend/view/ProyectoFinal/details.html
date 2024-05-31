@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Pedidos</title>
+    <link rel="stylesheet" href="../../asset/css/stylesDetalles.css">
+
+    <!-- Enlaces a Bootstrap y Bootswatch -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://bootswatch.com/4/cerulean/bootstrap.min.css">
+
+    <!-- Librería de ajax -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- Vincular js de Usuario -->
+    <script src="../../js/ProyectoFinal/details.js"></script>
+</head>
+<body>
+    <div id="outputData">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Pedido ID</th>
+                    <th>Menú ID</th>
+                    <th>Cantidad</th>
+                    <th>Precio</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="loadData">
+                <!-- Aquí llegan los datos de la BD -->
+            </tbody>
+        </table>
+    </div>
+    <div class="container">
+        <h2>Menú Restaurante</h2>
+        <section id="mi-seccion">
+            
+            <!-- Aquí va la imagen -->
+            <img src="../../asset/img/menu1.jpeg" alt="Menu" width="500" height="400">
+        </section>
+        <header>
+            <label>Gestión de Pedidos</label>
+        </header>
+        <div id="inputData">
+            <table class="table">
+                <tr>
+                    <td>Pedido ID</td>
+                    <td>
+                        <input type="hidden" id="id" name="id">
+                        <input type="text" class="form-control" name="pedidoId" id="pedidoId" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Menú ID</td>
+                    <td>
+                        <input type="text" class="form-control" name="menuId" id="menuId" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Cantidad</td>
+                    <td>
+                        <input type="number" class="form-control" name="cantidad" id="cantidad" value="">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Precio</td>
+                    <td>
+                        <input type="number" step="0.01" class="form-control" name="precio" id="precio" value="">
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="botones">
+            <input type="button" class="btn btn-secondary" value="Guardar" onclick="save()">
+        </div>
+        <br>
+        <div id="outputData">
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Pedido ID</th>
+                        <th>Menú ID</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="loadData">
+                    <!-- Aquí llegan los datos de la BD -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Scripts de Bootstrap (jQuery y Popper.js) -->
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
+</body>
+</html>
+<script>
+    all();
+</script>
